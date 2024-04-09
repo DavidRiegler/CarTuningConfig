@@ -13,7 +13,7 @@ const CarSchema = new mongoose.Schema({
 
 const CarModel = mongoose.model("cars", CarSchema)
 
-app.get("/getCars", (req, res) => {
+app.get("/Cars", (req, res) => {
   CarModel.find({}).then(function(cars) {
     res.json(cars)
   }).catch(function(err) {
