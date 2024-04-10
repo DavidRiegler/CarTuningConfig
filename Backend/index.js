@@ -1,25 +1,25 @@
 const express = require('express')
 const mongoose = require('mongoose')
+const carData = require('./Data/CarData');
+//const handlingData = require('');
+//const aerodynamicsData = require('./Data/AerodynamicsData');
+//const exhaustData = require('');
+//const wheelsData = require('');
+//const engineData = require('');
 
 const app = express()
 
 mongoose.connect('mongodb://localhost:27017/CarConfigDB')
-
-const CarSchema = new mongoose.Schema({
-  manufacturer: String,
-  model: String,
-  year: Number
+.then(async () => {
+  console.log('Connected to MongoDB');
+  await carData();
+  await handlingData();
+  await aerodynamicsData();
+  await exhaustData();
+  await wheelsData();
+  await engineData();
 })
-
-const CarModel = mongoose.model("cars", CarSchema)
-
-app.get("/Cars", (req, res) => {
-  CarModel.find({}).then(function(cars) {
-    res.json(cars)
-  }).catch(function(err) {
-    console.log(err)
-  })
-})
+.catch(err => console.error('Error connecting to MongoDB:', err));
 
 app.listen(3001, () => {
   console.log("Server is Running")
