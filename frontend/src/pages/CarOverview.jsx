@@ -4,7 +4,7 @@ export default function CarOverview() {
     return (
         <>
             <Header pageName="Cars"/>
-            <div className='mx-8 my-8'>
+            <div className='mx-8'>
                 <div className="bg-gray-800 rounded-lg overflow-hidden shadow-md">
                     <img
                         className="w-full h-full object-cover"

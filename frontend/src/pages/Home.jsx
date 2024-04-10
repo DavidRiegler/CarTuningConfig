@@ -2,7 +2,7 @@ import Header from '../components/Header'
 
 export default function Home() {
 
-    const baseWeight = 50
+    /*const baseWeight = 50
     const baseHorsepower = 70
     const baseAcceleration = 30
     const baseTopSpeed = 85
@@ -12,7 +12,7 @@ export default function Home() {
     const actualHorsepower = 75
     const actualAcceleration = 50
     const actualTopSpeed = 10
-    const actualHandling = 43
+    const actualHandling = 43*/
 
     return (
         <>
