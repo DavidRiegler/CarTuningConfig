@@ -22,31 +22,31 @@ export default function Home() {
                 <div className='relative'>
                     <div className='w-full h-full bg-primary absolute blur-md'></div>
                     <div className='w-full h-full bg-lightBg rounded-3xl relative grid grid-cols-2 grid-rows-5 items-center place-items-center px-10'>
-                        <h2>Weight</h2>
+                        <h2 className='text-xl font-semibold'>Weight</h2>
                         <div className='relative w-full'>
                             <div className='bg-darkBg w-full h-2 absolute rounded-full'></div>
                             <div className={`bg-primary w-[${50}%] h-2 relative rounded-full`}></div>
                         </div>
 
-                        <h2>Horsepower</h2>
+                        <h2 className='font-semibold text-xl'>Horsepower</h2>
                         <div className='relative w-full'>
                             <div className='bg-darkBg w-full h-2 absolute rounded-full'></div>
                             <div className={`bg-primary w-[${50}%] h-2 relative rounded-full`}></div>
                         </div>
 
-                        <h2>Acceleration</h2>
+                        <h2 className='font-semibold text-xl'>Acceleration</h2>
                         <div className='relative w-full'>
                             <div className='bg-darkBg w-full h-2 absolute rounded-full'></div>
                             <div className={`bg-primary w-[${50}%] h-2 relative rounded-full`}></div>
                         </div>
 
-                        <h2>Top Speed</h2>
+                        <h2 className='font-semibold text-xl'>Top Speed</h2>
                         <div className='relative w-full'>
                             <div className='bg-darkBg w-full h-2 absolute rounded-full'></div>
                             <div className={`bg-primary w-[${50}%] h-2 relative rounded-full`}></div>
                         </div>
 
-                        <h2>Handling</h2>
+                        <h2 className='font-semibold text-xl'>Handling</h2>
                         <div className='relative w-full'>
                             <div className='bg-darkBg w-full h-2 absolute rounded-full'></div>
                             <div className={`bg-primary w-[${50}%] h-2 relative rounded-full`}></div>
