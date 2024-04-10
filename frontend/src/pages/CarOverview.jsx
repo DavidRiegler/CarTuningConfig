@@ -1,6 +1,6 @@
 import Header from '../components/Header'
 
-export default function Cars() {
+export default function CarOverview() {
     return (
         <>
             <Header pageName="Cars"/>

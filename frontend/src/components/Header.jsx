@@ -19,8 +19,8 @@ export default function Header(pageName) {
             <nav>
                 <ul className="flex gap-8 title4">
                     <li className="w-20 h-10 flex justify-center items-center"><a className={`hover:text-3xl transition-all ${pageName.pageName == 'Home' ? 'underline' : ''}`} href="/Home">Home</a></li>
-                    <li className="w-20 h-10 flex justify-center items-center"><a className={`hover:text-3xl transition-all ${pageName.pageName == 'About' ? 'underline' : ''}`} href="/CarOverview">Cars</a></li>
-                    <li className="w-20 h-10 flex justify-center items-center"><a className={`hover:text-3xl transition-all ${pageName.pageName == 'Contact' ? 'underline' : ''}`} href="/ModsOverview">Mods</a></li>
+                    <li className="w-20 h-10 flex justify-center items-center"><a className={`hover:text-3xl transition-all ${pageName.pageName == 'Cars' ? 'underline' : ''}`} href="/CarOverview">Cars</a></li>
+                    <li className="w-20 h-10 flex justify-center items-center"><a className={`hover:text-3xl transition-all ${pageName.pageName == 'Mods' ? 'underline' : ''}`} href="/ModsOverview">Mods</a></li>
                 </ul>
             </nav>
         </header>
