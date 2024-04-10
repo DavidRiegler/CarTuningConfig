@@ -3,9 +3,9 @@ const mongoose = require('mongoose')
 const carData = require('./Data/CarData');
 //const handlingData = require('');
 const aerodynamicsData = require('./Data/AerodynamicsData');
-//const exhaustData = require('');
+const exhaustData = require('./Data/ExhaustData');
 //const wheelsData = require('');
-//const engineData = require('');
+const engineData = require('./Data/EngineData');
 
 const app = express()
 
