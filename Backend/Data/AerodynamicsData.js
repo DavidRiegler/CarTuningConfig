@@ -1,4 +1,3 @@
-const express = require('express')
 const AerodynamicsModel = require('../Models/AerodynamicsModel')
 
 const spoiler = {
