@@ -1,4 +1,3 @@
-const express = require('express')
 const mongoose = require('mongoose')
 
 const exhaustSystemSchema = new mongoose.Schema({

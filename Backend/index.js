@@ -1,10 +1,10 @@
 const express = require('express')
 const mongoose = require('mongoose')
 const carData = require('./Data/CarData');
-//const handlingData = require('');
+const handlingData = require('./Data/HandlingData');
 const aerodynamicsData = require('./Data/AerodynamicsData');
 const exhaustData = require('./Data/ExhaustData');
-//const wheelsData = require('');
+const wheelsData = require('./Data/WheelsData');
 const engineData = require('./Data/EngineData');
 
 const app = express()
