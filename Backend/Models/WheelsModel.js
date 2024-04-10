@@ -1,4 +1,3 @@
-const express = require('express')
 const mongoose = require('mongoose')
 
 const wheelsTiresSchema = new mongoose.Schema({
