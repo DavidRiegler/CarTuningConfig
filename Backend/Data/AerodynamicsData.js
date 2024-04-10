@@ -1,6 +1,5 @@
 const express = require('express')
 const AerodynamicsModel = require('../Models/AerodynamicsModel')
-const mongoose = require('mongoose')
 
 const spoiler = {
     name: "Universal Racing Spoiler",
@@ -31,7 +30,6 @@ const sideSkirts = {
 
 const insertAerodynamicsProducts = async () => {
     try {
-        const AerodynamicsModel = mongoose.model('Aerodynamics', aerodynamicsSchema);
         const products = [spoiler, frontSplitter, sideSkirts];
         for (const product of products) {
             const existingProduct = await AerodynamicsModel.findOne({ name: product.name });
@@ -47,9 +45,7 @@ const insertAerodynamicsProducts = async () => {
         console.error('Error connecting or inserting aerodynamics products:', err);
     }
 }
-  
+
 (async () => {
     await insertAerodynamicsProducts();
 })();
-
-module.exports = mongoose.model('Aerodynamics', aerodynamicsSchema);
