@@ -1,7 +1,9 @@
-import { useState } from 'react'
+// eslint-disable-next-line no-unused-vars
+import React, { useEffect, useState } from 'react'
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
 import Home from './pages/Home'
 
+// eslint-disable-next-line no-unused-vars
 import Car from './pages/Car'
 import CarOverview from './pages/CarOverview'
 import ModsOverview from './pages/ModsOverview'
@@ -9,7 +11,17 @@ import Register from './pages/Register'
 import Login from './pages/Login'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [backendData, setBackendData] = useState([{}])
+
+  useEffect(() => {
+    fetch("/api").then(
+      response => response.json()
+    ).then(
+      data => {
+        setBackendData(data)
+      }
+    )
+  }, [])
 
   return (
     <div className='bg-darkBg h-[200vh]'>
