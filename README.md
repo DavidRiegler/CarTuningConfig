@@ -6,12 +6,15 @@ Before starting the project download npm locally.
 ````Bash
 cd Backend
 npm i
+npm install mongoose
+npm install nodemon
 ````
 
 And for the frontend:
 ````Bash
 cd frontend
 npm i
+npm install axios
 ````
 
 To run the code now run these commands:
@@ -19,7 +22,7 @@ To run the code now run these commands:
 Backend:
 ````Bash
 cd Backend
-node index.js
+npm run dev
 ````
 
 Frontend:
@@ -27,3 +30,5 @@ Frontend:
 cd frontend
 npm run dev
 ````
+
+You have to have MongoDB Compass opened locally
