@@ -1,7 +1,4 @@
-const express = require('express')
 const CarModel = require('../Models/CarModel')
-
-const app = express()
 
 const nissan370z = {
     manufacturer: "Nissan",

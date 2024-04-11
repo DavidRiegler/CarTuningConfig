@@ -21,6 +21,8 @@ export default function Header(pageName) {
                     <li className="w-20 h-10 flex justify-center items-center"><a className={`hover:text-3xl transition-all ${pageName.pageName == 'Home' ? 'underline' : ''}`} href="/Home">Home</a></li>
                     <li className="w-20 h-10 flex justify-center items-center"><a className={`hover:text-3xl transition-all ${pageName.pageName == 'Cars' ? 'underline' : ''}`} href="/CarOverview">Cars</a></li>
                     <li className="w-20 h-10 flex justify-center items-center"><a className={`hover:text-3xl transition-all ${pageName.pageName == 'Mods' ? 'underline' : ''}`} href="/ModsOverview">Mods</a></li>
+                    <button className="bg-yellow-500 text-white p-2 rounded hover:bg-yellow-700"><a className={` ${pageName.pageName == 'Login' ? 'underline' : ''}`} href="/Login">Login</a></button>
+                    <button className="bg-yellow-500 text-white p-2 rounded hover:bg-yellow-700"><a className={` ${pageName.pageName == 'Register' ? 'underline' : ''}`} href="/Register">Register</a></button>
                 </ul>
             </nav>
         </header>
