@@ -37,6 +37,36 @@ app.get("/api", async (req, res) => {
   res.json({ cars, handling, aerodynamics, exhaust, wheel, engine });
 })
 
+app.get("/api/cars", async (req, res) => {
+  const cars = await CarModel.find();
+  res.json(cars);
+});
+
+app.get("/api/handling", async (req, res) => {
+  const handling = await HandlingModel.find();
+  res.json(handling);
+});
+
+app.get("/api/aerodynamics", async (req, res) => {
+  const aerodynamics = await AerodynamicsModel.find();
+  res.json(aerodynamics);
+});
+
+app.get("/api/exhaust", async (req, res) => {
+  const exhaust = await ExhaustModel.find();
+  res.json(exhaust);
+});
+
+app.get("/api/wheel", async (req, res) => {
+  const wheel = await WheelsModel.find();
+  res.json(wheel);
+});
+
+app.get("/api/engine", async (req, res) => {
+  const engine = await EngineModel.find();
+  res.json(engine);
+});
+
 app.listen(3001, () => {
   console.log("Server is Running")
 })
