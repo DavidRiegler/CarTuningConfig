@@ -6,8 +6,9 @@ function CarDetails() {
 
   useEffect(() => {
     const fetchData = async () => {
-      const response = await fetch('/api/cars');
+      const response = await fetch('http://localhost:3001/api/cars');
       const data = await response.json();
+      console.log(data)
       setCarData(data);
     };
 
@@ -16,7 +17,7 @@ function CarDetails() {
 
   return (
     <div className="container mx-auto px-4 py-8">
-        <h2>Hello</h2>
+      <h2>Hello</h2>
       {carData && (
         <ul>
           {carData.map((car) => (

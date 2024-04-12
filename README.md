@@ -2,6 +2,8 @@
 
 A website made for tuning exotic cars ranging from a Toyota Supra all the way to a Ford Mustang GT.
 
+Preferred node.js version: v20.12.1 or newer
+
 Before starting the project download npm locally.
 ````Bash
 cd Backend
@@ -30,5 +32,3 @@ Frontend:
 cd frontend
 npm run dev
 ````
-
-You have to have MongoDB Compass opened locally
