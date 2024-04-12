@@ -9,8 +9,10 @@ import CarOverview from './pages/CarOverview'
 import ModsOverview from './pages/ModsOverview'
 import Register from './pages/Register'
 import Login from './pages/Login'
+import Test from './pages/Test'
 
 function App() {
+  // eslint-disable-next-line no-unused-vars
   const [backendData, setBackendData] = useState([{}])
 
   useEffect(() => {
@@ -34,6 +36,7 @@ function App() {
           <Route path='/ModsOverview' element={<ModsOverview/>}></Route>
           <Route path='/Register' element={<Register/>}></Route>
           <Route path='/Login' element={<Login/>}></Route>
+          <Route path='/Test' element={<Test/>}></Route>
         </Routes>
       </BrowserRouter>
     </div>
