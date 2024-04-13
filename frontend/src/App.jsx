@@ -7,8 +7,6 @@ import Home from './pages/Home'
 import Car from './pages/Car'
 import CarOverview from './pages/CarOverview'
 import ModsOverview from './pages/ModsOverview'
-import Register from './pages/Register'
-import Login from './pages/Login'
 import Test from './pages/Test'
 
 function App() {
@@ -34,8 +32,6 @@ function App() {
 
           <Route path='/CarOverview' element={<CarOverview/>}></Route>
           <Route path='/ModsOverview' element={<ModsOverview/>}></Route>
-          <Route path='/Register' element={<Register/>}></Route>
-          <Route path='/Login' element={<Login/>}></Route>
           <Route path='/Test' element={<Test/>}></Route>
           <Route path='/Car' element={<Car/>}></Route>
         </Routes>
