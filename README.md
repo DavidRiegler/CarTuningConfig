@@ -19,6 +19,8 @@ npm i
 npm install axios
 ````
 
+You also have to download MongoDB: https://www.mongodb.com/try/download/community
+
 To run the code now run these commands:
 
 Backend:
