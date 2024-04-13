@@ -37,12 +37,15 @@ function App() {
     fetchData();
   }, []);
 
+  console.log(fetchDataByCategory('cars'))
+
 
   return (
     <div className="App text-white">
       <h1>Car Data</h1>
       {carData ? (
         <div>
+          
           <h2>Car</h2>
           
           {carData.cars.find((car) => car.manufacturer === 'Ford' || car.model === 'MustangGT')?.stats?.topSpeed}
