@@ -19,9 +19,9 @@ export default function Home() {
     var actualValues = {
         weight: (baseValues.weight || 0) + (ModImpact.weight || 0),
         horsepower: (baseValues.horsepower || 0) + (ModImpact.horsepower || 0),
-    acceleration: (baseValues.acceleration || 0) + (ModImpact.acceleration || 0),
-    topSpeed: (baseValues.topSpeed || 0) + (ModImpact.topSpeed || 0),
-    handling: (baseValues.handling || 0) + (ModImpact.handling || 0)
+        acceleration: (baseValues.acceleration || 0) + (ModImpact.acceleration || 0),
+        topSpeed: (baseValues.topSpeed || 0) + (ModImpact.topSpeed || 0),
+        handling: (baseValues.handling || 0) + (ModImpact.handling || 0)
     };
     
     // Erstelle eine Funktion, um die JSX-Elemente für alle Variablen zu generieren

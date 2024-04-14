@@ -80,3 +80,7 @@ export const getCurrentModStats = () => {
 
     return statChanges
 }
+
+export const getCars = () => {
+    return getData()?.cars
+}

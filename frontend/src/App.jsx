@@ -24,7 +24,7 @@ function App() {
   }, [])
 
   return (
-    <div className='bg-darkBg h-[200vh]'>
+    <div className='bg-darkBg min-h-screen'>
       <BrowserRouter>
         <Routes>
           <Route index element={<Home/>}></Route>
