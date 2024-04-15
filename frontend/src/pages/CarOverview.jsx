@@ -1,8 +1,6 @@
 import Header from '../components/Header'
 import {getCars} from '../BackEndConnection'
 
-// Toyota Bild ist nicht transparent!!!!
-
 export default function CarOverview() {
 
     const cars =  getCars();
@@ -21,8 +19,6 @@ export default function CarOverview() {
                         />
                         <div className="p-4">
                             <h3 className="text-lg font-medium text-white">{`${car.manufacturer} ${car.model}`}</h3>
-                            {// Kilometer sind noch nicht in der DB!!!!!!!!!!!!!
-                            }
                             <p className="text-gray-400 text-sm mb-2">{`${car.year}, 4km`}</p>
                             <div className="flex justify-between items-center">
                                 <p className="text-gray-400 text-sm">{`${car.price}$`}</p>
