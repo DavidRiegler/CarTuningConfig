@@ -27,7 +27,7 @@ function getData() {
             aerodynamics: fetchedData[2],
             engine: fetchedData[3],
             wheels: fetchedData[4],
-            exhaust: fetchedData[5], // Add exhaust property
+            exhaust: fetchedData[5], 
         };
 
         setCarData(combinedData);
