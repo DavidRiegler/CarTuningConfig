@@ -84,3 +84,15 @@ export const getCurrentModStats = () => {
 export const getCars = () => {
     return getData()?.cars
 }
+
+export const getMods = () => {
+    var mods = {
+        handling: getData()?.handling,
+        aerodynamics: getData()?.aerodynamics,
+        engine: getData()?.engine,
+        wheels: getData()?.wheels,
+        exhaust: getData()?.exhaust
+    }
+
+    return mods
+}
