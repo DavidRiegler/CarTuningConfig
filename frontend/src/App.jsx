@@ -4,7 +4,6 @@ import {BrowserRouter, Routes, Route} from 'react-router-dom'
 import Home from './pages/Home'
 
 // eslint-disable-next-line no-unused-vars
-import Car from './pages/Car'
 import CarOverview from './pages/CarOverview'
 import ModsOverview from './pages/ModsOverview'
 import Test from './pages/Test'
@@ -33,7 +32,6 @@ function App() {
           <Route path='/CarOverview' element={<CarOverview/>}></Route>
           <Route path='/ModsOverview' element={<ModsOverview/>}></Route>
           <Route path='/Test' element={<Test/>}></Route>
-          <Route path='/Car' element={<Car/>}></Route>
         </Routes>
       </BrowserRouter>
     </div>
