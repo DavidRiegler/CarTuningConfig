@@ -1,7 +1,9 @@
+// eslint-disable-next-line no-unused-vars
 import React, {useState} from 'react'
 
 export default function Header(pageName) {
 
+    // eslint-disable-next-line no-unused-vars
     const [color, setColor] = useState(false)
     const changeColor = () => {
         if(window.scrollY >= 20) {

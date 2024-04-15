@@ -6,8 +6,6 @@ export default function CarOverview() {
 
   const cars = getCars();
 
-  console.log(cars)
-
   function renderCarCards() {
     return cars?.map((car, index) => {
       const carLink = `/cars/${car.manufacturer}-${car.model}`; 
@@ -22,9 +20,8 @@ export default function CarOverview() {
             />
             <div className="p-4">
               <h3 className="text-lg font-medium text-white">{`${car.manufacturer} ${car.model}`}</h3>
-              <p className="text-gray-400 text-sm mb-2">{`${car.year}, 4km`}</p>
+              <p className="text-gray-400 text-sm mb-2">{`${car.year}`}</p>
               <div className="flex justify-between items-center">
-                <p className="text-gray-400 text-sm">{`${car.price}$`}</p>
                 <span className="text-white font-bold">{`$ ${car.price}`}</span>
               </div>
             </div>
