@@ -33,7 +33,6 @@ function App() {
           <Route path='/CarOverview' element={<CarOverview/>}></Route>
           <Route path='/ModsOverview' element={<ModsOverview/>}></Route>
           <Route path='/Test' element={<Test/>}></Route>
-          <Route path='/Car' element={<Car/>}></Route>
         </Routes>
       </BrowserRouter>
     </div>
