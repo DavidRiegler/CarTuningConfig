@@ -8,7 +8,7 @@ export default function CarOverview() {
 
   function renderCarCards() {
     return cars?.map((car, index) => {
-      const carLink = `/cars/${car.manufacturer}-${car.model}`; 
+      const carLink = `/Car`; 
 
       return (
         <Link key={index} to={carLink} className='mx-8 my-8 block'>
