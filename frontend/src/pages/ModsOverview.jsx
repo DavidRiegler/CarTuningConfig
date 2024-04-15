@@ -73,9 +73,9 @@ export default function ModsOverview() {
         </ul>
       </div>
 
-      <div className='text-font grid grid-flow-col place-items-center mt-10'>
-        {renderMods()}
-      </div>
-    </>
-  );
+            <div className='text-font grid grid-flow-col gap-10 place-items-center mt-10'>
+                {renderMods()}
+            </div>
+        </>
+    )
 }
