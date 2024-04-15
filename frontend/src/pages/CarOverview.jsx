@@ -10,7 +10,7 @@ export default function CarOverview() {
     function renderCarCards() {
         return  cars?.map((car, index)=>{
             return (
-                <div className='mx-8 my-8'>
+                <div key={index} className='mx-8 my-8'>
                     <div className="bg-lightBg rounded-lg overflow-hidden shadow-md">
                         <img
                             className="w-full h-full object-cover"
