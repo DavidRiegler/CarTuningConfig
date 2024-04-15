@@ -1,15 +1,29 @@
-const mongoose = require('mongoose');
-
-const ConfigSchema = new mongoose.Schema({
-    name: {
-        type: String,
-        required: true,
-        unique: true,
-    },
-    data: {
-        type: Object,
-        required: true,
-    },
+const ConfigurationSchema = new mongoose.Schema({
+  configName: String,
+  car: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'Car'
+  },
+  aerodynamics: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'Aerodynamics'
+  },
+  engine: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'Engine'
+  },
+  exhaust: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'Exhaust'
+  },
+  handling: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'Handling'
+  },
+  wheel: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'Wheel'
+  }
 });
-  
-module.exports = mongoose.model('Config', ConfigSchema);
+
+module.exports = mongoose.model('Configuration', ConfigurationSchema);
