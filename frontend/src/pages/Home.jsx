@@ -6,7 +6,6 @@ export default function Home() {
     var stats = getCurrentCar()?.stats
 
     var ModImpact = getCurrentModStats()
-    console.log(ModImpact)
 
     var baseValues = {
         weight: stats?.weight,
