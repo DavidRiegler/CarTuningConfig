@@ -49,7 +49,7 @@ export default function CarOverview() {
       <div key={index} className="grid grid-cols-2 gap-4 bg-lightBg rounded-lg overflow-hidden shadow-md mx-8 my-10">
         <div className="col-span-1 flex flex-col items-center justify-center">
           <img
-            className="w-full max-h-48 object-contain"
+            className="w-full max-h-48 object-contain mt-5"
             src={`./src/assets/cars/${car.manufacturer.replace(/\s+/g, '')}${car.model.replace(/\s+/g, '')}.png`}         
             alt={`${car.manufacturer} ${car.model} image`}
           />
