@@ -1,3 +1,5 @@
+const mongoose = require('mongoose')
+
 const ConfigurationSchema = new mongoose.Schema({
   configName: String,
   car: {

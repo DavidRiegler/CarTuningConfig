@@ -67,6 +67,7 @@ export default function CarOverview() {
                   if (confirmation) {
                     localStorage.removeItem('selectedCar');
                     setSelectedCar(car);
+                    alert("Selected " + car.manufacturer + " " + car.model + " successfully!")
                   }
                 }}>
               Select

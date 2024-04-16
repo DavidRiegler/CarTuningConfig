@@ -27,7 +27,7 @@ export default function ModsOverview() {
           <button
             className='bg-yellow-500 text-white px-6 py-3 rounded-md hover:bg-yellow-600 self-center'
             disabled={selectedMods[selectedCategory]} 
-            onClick={() => handleSelectMod(selectedCategory, mod)} 
+            onClick={() => handleSelectMod(selectedCategory, mod)}
           >
             Select
           </button>
