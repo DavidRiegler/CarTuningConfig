@@ -5,6 +5,7 @@ import { useState, useEffect } from 'react';
 export default function Home() {
   const [selectedCarData, setSelectedCarData] = useState(null); 
 
+
   useEffect(() => {
     const storedCarData = localStorage.getItem('selectedCar');
     if (storedCarData) {

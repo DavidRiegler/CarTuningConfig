@@ -45,7 +45,11 @@ function getData() {
 
 // gibt momentan nur das Auto mit Index 0 zurück
 export const getCurrentCar = () => {
-    return getData()?.cars[0]
+    var storedCarData = null
+    storedCarData = JSON.parse(localStorage.getItem('selectedCar'))
+
+    console.log(storedCarData)
+    return storedCarData
 }
 
 export const getCurrentModStats = () => {
