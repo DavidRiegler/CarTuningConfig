@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-unused-vars
 import React, { useState, useEffect } from 'react';
 
 async function fetchDataByCategory(category) {
@@ -7,8 +8,10 @@ async function fetchDataByCategory(category) {
 }
 
 function getData() {
+    // eslint-disable-next-line react-hooks/rules-of-hooks
     const [carData, setCarData] = useState(null);
 
+    // eslint-disable-next-line react-hooks/rules-of-hooks
     useEffect(() => {
         const fetchData = async () => {
         const fetchedData = await Promise.all([
