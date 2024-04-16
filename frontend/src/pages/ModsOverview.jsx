@@ -7,12 +7,13 @@ export default function ModsOverview() {
   const [selectedMods, setSelectedMods] = useState({});
 
   function handleSelectMod(category, mod) {
-    setSelectedMods(prevSelectedMods => ({
-      ...prevSelectedMods,
-      [category]: mod,
-    }));
-
-    localStorage.setItem('selectedMods', JSON.stringify(selectedMods));
+    const newSelectedMods = { ...selectedMods };
+    if (newSelectedMods[category]) {
+      newSelectedMods[category] = null; 
+    }
+    newSelectedMods[category] = mod;
+    setSelectedMods(newSelectedMods);
+    localStorage.setItem('selectedMods', JSON.stringify(newSelectedMods));
   }
 
   function renderMods() {
@@ -26,9 +27,12 @@ export default function ModsOverview() {
           <h3 className=''>{mod.description}</h3>
           <button
             className='bg-yellow-500 text-white px-6 py-3 rounded-md hover:bg-yellow-600 self-center'
-            disabled={selectedMods[selectedCategory]} 
-            onClick={() => handleSelectMod(selectedCategory, mod)}
-          >
+            disabled={selectedMods[selectedCategory] && selectedMods[selectedCategory].name !== mod.name}
+            onClick={() => {
+              handleSelectMod(selectedCategory, mod)
+              alert("Selected " + mod.name + " successfully!")
+            }
+            }>
             Select
           </button>
         </div>
