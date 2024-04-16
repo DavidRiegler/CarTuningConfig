@@ -48,7 +48,6 @@ export const getCurrentCar = () => {
     var storedCarData = null
     storedCarData = JSON.parse(localStorage.getItem('selectedCar'))
 
-    console.log(storedCarData)
     return storedCarData
 }
 

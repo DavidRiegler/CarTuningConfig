@@ -64,6 +64,25 @@ export default function Home() {
     });
   };
 
+  const renderSelectedMods = () => {
+    return (
+
+      // Hier Array.map statt Array.from ....
+      Array.from({ length: 5 }, (_, i) => (
+        <div key={i} className='w-1/5 '>
+          <div className='bg-lightBg mx-10 p-5 text-center rounded-xl border-b-primary border-r-primary border-b-2 border-r-2'>
+            <h2 className='text-font font-bold text-xl'>Mod Name</h2>
+            <p className='text-font'>
+              Mod Description Lorem Ipsum BLABLABLA Oder so halt yk halt so
+              random shit zu dem Ding und so ig no cap deadass frfr
+            </p>
+          </div>
+        </div>
+      ))
+    );
+  };
+  
+
   return (
     <>
       <Header pageName="Home" />
@@ -82,6 +101,9 @@ export default function Home() {
             {renderProgressBars()}
           </div>
         </div>
+      </div>
+      <div className='mt-20 flex'>
+        {renderSelectedMods()}
       </div>
     </>
   );
