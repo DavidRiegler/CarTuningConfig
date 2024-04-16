@@ -65,21 +65,60 @@ export default function Home() {
   };
 
   const renderSelectedMods = () => {
-    return (
+    var selectedMods = JSON.parse(localStorage.getItem('selectedMods'))
 
-      // Hier Array.map statt Array.from ....
-      Array.from({ length: 5 }, (_, i) => (
-        <div key={i} className='w-1/5 '>
-          <div className='bg-lightBg mx-10 p-5 text-center rounded-xl border-b-primary border-r-primary border-b-2 border-r-2'>
-            <h1 className='text-font font-extrabold text-xl'>KATEGORIE</h1>
-            <h2 className='text-font font-bold text-lg'>Mod Name</h2>
-            <p className='text-font'>
-              Mod Description Lorem Ipsum BLABLABLA Oder so halt yk halt so
-              random shit zu dem Ding und so ig no cap deadass frfr
-            </p>
+    if(!selectedMods) {
+      selectedMods = {
+        aerodynamics: null,
+        engine: null,
+        exhaust: null,
+        handling: null,
+        wheels: null
+      }
+    }
+
+    return (
+      <div className='mt-20 flex'>
+        <div className='w-1/5 '>
+          <div className='bg-lightBg h-full mx-10 p-5 text-center rounded-xl border-b-primary border-r-primary border-b-2 border-r-2' style={{display: selectedMods.aerodynamics == null ? 'none' : 'block'}}>
+            <h1 className='text-font font-extrabold text-xl'>Aerodynamics</h1>
+            <h2 className='text-font font-bold text-lg'>{selectedMods.aerodynamics.name}</h2>
+            <p className='text-font'>{selectedMods.aerodynamics.description}</p>
           </div>
         </div>
-      ))
+
+        <div className='w-1/5 '>
+          <div className='bg-lightBg h-full mx-10 p-5 text-center rounded-xl border-b-primary border-r-primary border-b-2 border-r-2' style={{display: selectedMods.engine == null ? 'none' : 'block'}}>
+            <h1 className='text-font font-extrabold text-xl'>Engine</h1>
+            <h2 className='text-font font-bold text-lg'>{selectedMods.engine.name}</h2>
+            <p className='text-font'>{selectedMods.engine.description}</p>
+          </div>
+        </div>
+
+        <div className='w-1/5 '>
+          <div className='bg-lightBg h-full mx-10 p-5 text-center rounded-xl border-b-primary border-r-primary border-b-2 border-r-2' style={{display: selectedMods.exhaust == null ? 'none' : 'block'}}>
+            <h1 className='text-font font-extrabold text-xl'>Exhaust</h1>
+            <h2 className='text-font font-bold text-lg'>{selectedMods.exhaust.name}</h2>
+            <p className='text-font'>{selectedMods.exhaust.description}</p>
+          </div>
+        </div>
+
+        <div className='w-1/5 '>
+          <div className='bg-lightBg h-full mx-10 p-5 text-center rounded-xl border-b-primary border-r-primary border-b-2 border-r-2' style={{display: selectedMods.handling == null ? 'none' : 'block'}}>
+            <h1 className='text-font font-extrabold text-xl'>Handling</h1>
+            <h2 className='text-font font-bold text-lg'>{selectedMods.handling.name}</h2>
+            <p className='text-font'>{selectedMods.handling.description}</p>
+          </div>
+        </div>
+
+        <div className='w-1/5 '>
+          <div className='bg-lightBg h-full mx-10 p-5 text-center rounded-xl border-b-primary border-r-primary border-b-2 border-r-2' style={{display: selectedMods.wheels == null ? 'none' : 'block'}}>
+            <h1 className='text-font font-extrabold text-xl'>Wheels</h1>
+            <h2 className='text-font font-bold text-lg'>{selectedMods.wheels.name}</h2>
+            <p className='text-font'>{selectedMods.wheels.description}</p>
+          </div>
+        </div>
+      </div>
     );
   };
   
@@ -103,9 +142,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className='mt-20 flex'>
-        {renderSelectedMods()}
-      </div>
+      {renderSelectedMods()}
     </>
   );
 }
