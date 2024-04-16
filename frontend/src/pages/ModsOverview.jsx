@@ -1,16 +1,18 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Header from '../components/Header'
 import { getMods } from '../BackEndConnection'
 
 export default function ModsOverview() {
-  const [selectedCategory, setSelectedCategory] = useState("aerodynamics"); 
-  const [selectedMods, setSelectedMods] = useState({}); 
+  const [selectedCategory, setSelectedCategory] = useState("aerodynamics");
+  const [selectedMods, setSelectedMods] = useState({});
 
   function handleSelectMod(category, mod) {
     setSelectedMods(prevSelectedMods => ({
       ...prevSelectedMods,
-      [category]: mod, 
+      [category]: mod,
     }));
+
+    localStorage.setItem('selectedMods', JSON.stringify(selectedMods));
   }
 
   function renderMods() {
@@ -24,8 +26,8 @@ export default function ModsOverview() {
           <h3 className=''>{mod.description}</h3>
           <button
             className='bg-yellow-500 text-white px-6 py-3 rounded-md hover:bg-yellow-600 self-center'
-            disabled={selectedMods[mod.category]} 
-            onClick={() => handleSelectMod(mod.category, mod)}
+            disabled={selectedMods[selectedCategory]} 
+            onClick={() => handleSelectMod(selectedCategory, mod)} 
           >
             Select
           </button>
@@ -33,6 +35,17 @@ export default function ModsOverview() {
       ))
     );
   }
+
+  useEffect(() => {
+    const storedMods = localStorage.getItem('selectedMods');
+    if (storedMods) {
+      try {
+        setSelectedMods(JSON.parse(storedMods));
+      } catch (error) {
+        console.error('Error retrieving selected mods from local storage:', error);
+      }
+    }
+  }, []);
 
   return (
     <>
@@ -72,9 +85,9 @@ export default function ModsOverview() {
         </ul>
       </div>
 
-            <div className='text-font grid grid-flow-col gap-10 place-items-center mt-10'>
-                {renderMods()}
-            </div>
-        </>
-    )
+      <div className='text-font grid grid-flow-col gap-10 place-items-center mt-10'>
+        {renderMods()}
+      </div>
+    </>
+  );
 }
