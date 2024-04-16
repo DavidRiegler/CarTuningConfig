@@ -71,7 +71,8 @@ export default function Home() {
       Array.from({ length: 5 }, (_, i) => (
         <div key={i} className='w-1/5 '>
           <div className='bg-lightBg mx-10 p-5 text-center rounded-xl border-b-primary border-r-primary border-b-2 border-r-2'>
-            <h2 className='text-font font-bold text-xl'>Mod Name</h2>
+            <h1 className='text-font font-extrabold text-xl'>KATEGORIE</h1>
+            <h2 className='text-font font-bold text-lg'>Mod Name</h2>
             <p className='text-font'>
               Mod Description Lorem Ipsum BLABLABLA Oder so halt yk halt so
               random shit zu dem Ding und so ig no cap deadass frfr
