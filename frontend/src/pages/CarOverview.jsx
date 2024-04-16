@@ -1,8 +1,13 @@
 import Header from '../components/Header';
 import { getCars } from '../BackEndConnection';
+import { useState, useEffect } from 'react';
 
 export default function CarOverview() {
   const cars = getCars();
+
+  const [selectedCar, setSelectedCar] = useState(
+    JSON.parse(localStorage.getItem('selectedCar')) || null
+  );
 
   function renderProgressBars(car) {
     const baseValues = {
@@ -45,7 +50,7 @@ export default function CarOverview() {
         <div className="col-span-1 flex flex-col items-center justify-center">
           <img
             className="w-full max-h-48 object-contain"
-            src={`./src/assets/cars/${car.manufacturer.replace(/\s+/g, '')}${car.model.replace(/\s+/g, '')}.png`}
+            src={`./src/assets/cars/${car.manufacturer.replace(/\s+/g, '')}${car.model.replace(/\s+/g, '')}.png`}         
             alt={`${car.manufacturer} ${car.model} image`}
           />
           <h3 className="text-lg font-medium text-white mt-4">{`${car.manufacturer} ${car.model}`}</h3>
@@ -56,12 +61,27 @@ export default function CarOverview() {
           {renderProgressBars(car)}
           <div className="flex justify-between items-center mb-4">
             <span className="text-white font-bold mx-28">{`$ ${car.price}`}</span>
-            <button className='bg-yellow-500 text-white px-6 py-3 rounded-md hover:bg-yellow-600'>Select</button>
+            <button className='bg-yellow-500 text-white px-6 py-3 rounded-md hover:bg-yellow-600'
+                    onClick={() => {
+                      const confirmation = window.confirm(`Are you sure you want to select ${car.manufacturer} ${car.model}?`);
+                      if (confirmation) {
+                        localStorage.removeItem('selectedCar');
+                        setSelectedCar(car);
+                      }
+                    }}>
+              Select
+            </button>
           </div>
         </div>
       </div>
     ));
   }
+
+  useEffect(() => {
+    if (selectedCar) {
+      localStorage.setItem('selectedCar', JSON.stringify(selectedCar));
+    }
+  }, [selectedCar]);
 
   return (
     <>

@@ -7,10 +7,9 @@ export default function ModsOverview() {
   const [selectedMods, setSelectedMods] = useState({}); 
 
   function handleSelectMod(category, mod) {
-    // Update selectedMods state
     setSelectedMods(prevSelectedMods => ({
       ...prevSelectedMods,
-      [category]: mod, // Update only the selected category
+      [category]: mod, 
     }));
   }
 
@@ -25,7 +24,7 @@ export default function ModsOverview() {
           <h3 className=''>{mod.description}</h3>
           <button
             className='bg-yellow-500 text-white px-6 py-3 rounded-md hover:bg-yellow-600 self-center'
-            disabled={selectedMods[mod.category]} // Disable button if a mod from the category is already selected
+            disabled={selectedMods[mod.category]} 
             onClick={() => handleSelectMod(mod.category, mod)}
           >
             Select
