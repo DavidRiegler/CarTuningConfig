@@ -16,7 +16,7 @@ export default function Header(pageName) {
     window.addEventListener('scroll', changeColor)
 
     return(
-        <header className={`bg-darkBg bg-opacity-95 flex justify-between p-8 sticky top-0 left-0 transition-colors`}>
+        <header className={`bg-darkBg flex justify-between p-8 sticky top-0 left-0 z-50 transition-colors`}>
             <h1 className="title1">{pageName.pageName}</h1>
             <nav>
                 <ul className="flex gap-8 title4">

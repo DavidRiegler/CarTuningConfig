@@ -27,7 +27,6 @@ export default function ModsOverview() {
           <h3 className=''>{mod.description}</h3>
           <button
             className='bg-yellow-500 text-white px-6 py-3 rounded-md hover:bg-yellow-600 self-center'
-            disabled={selectedMods[selectedCategory] && selectedMods[selectedCategory].name !== mod.name}
             onClick={() => {
               handleSelectMod(selectedCategory, mod)
               alert("Selected " + mod.name + " successfully!")
