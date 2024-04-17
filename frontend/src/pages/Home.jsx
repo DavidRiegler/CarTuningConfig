@@ -163,7 +163,6 @@ export default function Home() {
       </div>
     );
   };
-  
 
   return (
     <>
@@ -171,8 +170,9 @@ export default function Home() {
       <div className='grid grid-rows-1 grid-cols-2 mx-10 mt-5 gap-10'>
         {selectedCarData ? (
           <img
-          src={`./src/assets/cars/${selectedCarData.manufacturer.replace(/\s+/g, '')}${selectedCarData.model.replace(/\s+/g, '')}.png`}            
-          alt={`${selectedCarData.manufacturer} ${selectedCarData.model} image`}
+            src={`./src/assets/cars/${selectedCarData.manufacturer.replace(/\s+/g, '')}${selectedCarData.model.replace(/\s+/g, '')}.png`}            
+            alt={`${selectedCarData.manufacturer} ${selectedCarData.model} image`}
+            style={{ maxWidth: '400px', maxHeight: '200px', objectFit: 'cover' }}
           />
         ) : (
           <img src='./src/assets/car.png' alt="Current Car" />
