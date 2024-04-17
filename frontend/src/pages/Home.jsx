@@ -46,6 +46,7 @@ export default function Home() {
       const actualValue = actualValues[key];
       const percentage = (actualValue / baseValue) * 100;
 
+
       return (
         <div key={index} className='grid grid-cols-2 grid-rows-1 w-full items-center place-items-center'>
           <h2 className='text-xl font-semibold text-font'>{key.charAt(0).toUpperCase() + key.slice(1)}</h2>

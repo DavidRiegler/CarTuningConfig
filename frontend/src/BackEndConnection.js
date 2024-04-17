@@ -45,13 +45,20 @@ function getData() {
 
 // gibt momentan nur das Auto mit Index 0 zurück
 export const getCurrentCar = () => {
-    var storedCarData = null
-    storedCarData = JSON.parse(localStorage.getItem('selectedCar'))
+    var [storedCarData, setStoredCar] = useState()
+    
+    useEffect (() => {
+        setStoredCar(JSON.parse(localStorage.getItem('selectedCar')))
+    })
 
+    
     return storedCarData
 }
 
 export const getCurrentModStats = () => {
+
+    let mods = JSON.parse(localStorage.getItem("selectedMods"))
+
     var statChanges = {
         weight: 0,
         horsepower: 0,
@@ -61,28 +68,29 @@ export const getCurrentModStats = () => {
     }
 
     // Data of Handling Mods
-    statChanges.weight += getData()?.handling[0].weightChange
-    statChanges.handling += getData()?.handling[0].handlingImprovement
+    statChanges.weight += mods?.handling?.weightChange || 0
+    statChanges.handling += mods?.handling?.handlingImprovement || 0
 
     // Data of Aerodynamics Mods
-    statChanges.topSpeed += getData()?.aerodynamics[0].topSpeedIncrease
-    statChanges.handling += getData()?.aerodynamics[0].handlingImprovement
-    statChanges.weight += getData()?.aerodynamics[0].weightChange
+    statChanges.topSpeed += mods?.aerodynamics?.topSpeedIncrease || 0
+    statChanges.handling += mods?.aerodynamics?.handlingImprovement || 0
+    statChanges.weight += mods?.aerodynamics?.weightChange || 0
 
     // Data of Engine Mods
-    statChanges.horsepower += getData()?.engine[0].horsepowerGain
-    statChanges.acceleration += getData()?.engine[0].accelerationImprovement
-    statChanges.topSpeed += getData()?.engine[0].topSpeedIncrease
-    statChanges.weight += getData()?.engine[0].weightChange
+    statChanges.horsepower += mods?.engine?.horsepowerGain || 0
+    statChanges.acceleration += mods?.engine?.accelerationImprovement || 0
+    statChanges.topSpeed += mods?.engine?.topSpeedIncrease || 0
+    statChanges.weight += mods?.engine?.weightChange || 0
 
     // Data of Exhaust Mods
-    statChanges.horsepower += getData()?.exhaust[0].horsepowerGain
-    statChanges.weight += getData()?.exhaust[0].weightChange
+    statChanges.horsepower += mods?.exhaust?.horsepowerGain || 0
+    statChanges.weight += mods?.exhaust?.weightChange || 0
 
     // Data of Wheels Mods
-    statChanges.weight += getData()?.wheels[0].weightChange
-    statChanges.handling += getData()?.wheels[0].handlingImpact
-    statChanges.acceleration += getData()?.wheels[0].accelerationImpact
+    statChanges.weight += mods?.wheels?.weightChange || 0
+    statChanges.handling += mods?.wheels?.handlingImpact || 0
+    statChanges.acceleration += mods?.wheels?.accelerationImpact || 0
+
 
     return statChanges
 }
