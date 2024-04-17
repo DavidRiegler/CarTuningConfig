@@ -5,11 +5,11 @@ const nissan370z = {
     model: "370Z",
     year: 2023,
     stats: {
-      weight: 77,
-      horsepower: 80,
-      acceleration: 75, 
-      topSpeed: 85, 
-      handling: 90   
+      weight: 67,
+      horsepower: 50,
+      acceleration: 45, 
+      topSpeed: 55, 
+      handling: 60   
     },
     price: 35000
 };
@@ -19,11 +19,11 @@ const subaruWrxSti = {
     model: "WRX STI",
     year: 2024,
     stats: {
-      weight: 79, 
-      horsepower: 85,
-      acceleration: 85,  
-      topSpeed: 80,
-      handling: 95 
+      weight: 69, 
+      horsepower: 55,
+      acceleration: 55,  
+      topSpeed: 50,
+      handling: 65 
     },
     price: 40000
 };
@@ -33,11 +33,11 @@ const fordMustangGt = {
     model: "Mustang GT",
     year: 2022,
     stats: {
-      weight: 89,
-      horsepower: 90, 
-      acceleration: 80,
-      topSpeed: 90,
-      handling: 80  
+      weight: 79,
+      horsepower: 60, 
+      acceleration: 50,
+      topSpeed: 60,
+      handling: 50  
     },
     price: 42000
 };
@@ -47,11 +47,11 @@ const hondaCivicSi = {
     model: "Civic Si",
     year: 2021,
     stats: {
-      weight: 66,
-      horsepower: 70,
-      acceleration: 70,
-      topSpeed: 75,
-      handling: 85 
+      weight: 56,
+      horsepower: 40,
+      acceleration: 40,
+      topSpeed: 45,
+      handling: 55 
     },
     price: 28000
 };
@@ -61,11 +61,11 @@ const toyotaSupra = {
     model: "Supra",
     year: 2020,
     stats: {
-      weight: 75,
-      horsepower: 85,
-      acceleration: 80,
-      topSpeed: 90, 
-      handling: 85 
+      weight: 65,
+      horsepower: 55,
+      acceleration: 50,
+      topSpeed: 60, 
+      handling: 55 
     },
     price: 48000
 };
