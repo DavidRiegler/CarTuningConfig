@@ -6,7 +6,7 @@ const airIntake = {
   horsepowerGain: 10,
   accelerationImprovement: 1, 
   topSpeedIncrease: 2,
-  weightChange: -2, // Negative for weight reduction
+  weightChange: 2,
   cost: 450
 };
 
@@ -16,7 +16,7 @@ const performanceExhaust = {
   horsepowerGain: 5,
   accelerationImprovement: 1,
   topSpeedIncrease: 1,
-  weightChange: -5,
+  weightChange: 5,
   cost: 600
 };
 
@@ -26,7 +26,7 @@ const lightweightFlywheel = {
   horsepowerGain: 2,
   accelerationImprovement: 1,
   topSpeedIncrease: 0,
-  weightChange: -8,
+  weightChange: 8,
   cost: 380
 };
 

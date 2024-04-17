@@ -3,7 +3,7 @@ const WheelsModel = require('../Models/WheelsModel')
 const lightweightWheels = {
   name: "Lightweight Wheels",
   description: "These lightweight wheels reduce unsprung weight, improving handling and acceleration.",
-  weightChange: -8,  // Lighter weight
+  weightChange: 8, 
   handlingImpact: 1, 
   accelerationImpact: 1, 
   cost: 1500
@@ -12,7 +12,7 @@ const lightweightWheels = {
 const performanceTires = {
   name: "Performance Tires",
   description: "These tires offer increased grip for better handling and cornering performance. May wear out faster than standard tires.",
-  weightChange: -2,  // Slightly lighter weight
+  weightChange: 2, 
   handlingImpact: 2,  
   accelerationImpact: 0, 
   cost: 800
@@ -21,7 +21,7 @@ const performanceTires = {
 const largerDiameterWheels = {
   name: "Larger Diameter Wheels",
   description: "Larger diameter wheels can improve appearance but may increase weight and reduce acceleration.",
-  weightChange: 5,  // Heavier weight
+  weightChange: -5, 
   handlingImpact: -1, 
   accelerationImpact: -1, 
   cost: 1200

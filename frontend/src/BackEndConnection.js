@@ -42,8 +42,6 @@ function getData() {
     return carData
 }
 
-
-// gibt momentan nur das Auto mit Index 0 zurück
 export const getCurrentCar = () => {
     var [storedCarData, setStoredCar] = useState()
     
@@ -51,7 +49,6 @@ export const getCurrentCar = () => {
         setStoredCar(JSON.parse(localStorage.getItem('selectedCar')))
     })
 
-    
     return storedCarData
 }
 

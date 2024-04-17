@@ -5,7 +5,7 @@ const spoiler = {
     description: "This high-performance spoiler increases downforce for improved handling and stability at high speeds. Made from lightweight yet durable ABS plastic.",
     topSpeedIncrease: 2, 
     handlingImprovement: 5,
-    weightChange: 1, 
+    weightChange: -1, 
     cost: 250
 };
   
@@ -14,7 +14,7 @@ const frontSplitter = {
     description: "This adjustable front splitter helps to reduce front-end lift and improve downforce for better turn-in and cornering performance.",
     topSpeedIncrease: 1, 
     handlingImprovement: 3,
-    weightChange: 2,
+    weightChange: -2,
     cost: 300
 };
   
@@ -23,7 +23,7 @@ const sideSkirts = {
     description: "These sleek side skirts channel airflow to improve side stability and reduce drag for slightly better top speed.",
     topSpeedIncrease: 1,
     handlingImprovement: 2,
-    weightChange: 5, 
+    weightChange: -5, 
     cost: 180
 };
 

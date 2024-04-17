@@ -5,7 +5,7 @@ const nissan370z = {
     model: "370Z",
     year: 2023,
     stats: {
-      weight: 67,
+      weight: 47,
       horsepower: 50,
       acceleration: 45, 
       topSpeed: 55, 
@@ -19,7 +19,7 @@ const subaruWrxSti = {
     model: "WRX STI",
     year: 2024,
     stats: {
-      weight: 69, 
+      weight: 49, 
       horsepower: 55,
       acceleration: 55,  
       topSpeed: 50,
@@ -33,7 +33,7 @@ const fordMustangGt = {
     model: "Mustang GT",
     year: 2022,
     stats: {
-      weight: 79,
+      weight: 59,
       horsepower: 60, 
       acceleration: 50,
       topSpeed: 60,
@@ -47,7 +47,7 @@ const hondaCivicSi = {
     model: "Civic Si",
     year: 2021,
     stats: {
-      weight: 56,
+      weight: 36,
       horsepower: 40,
       acceleration: 40,
       topSpeed: 45,
@@ -61,7 +61,7 @@ const toyotaSupra = {
     model: "Supra",
     year: 2020,
     stats: {
-      weight: 65,
+      weight: 45,
       horsepower: 55,
       acceleration: 50,
       topSpeed: 60, 
