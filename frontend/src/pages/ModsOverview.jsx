@@ -8,11 +8,7 @@ export default function ModsOverview() {
 
   function handleSelectMod(category, mod) {
     const newSelectedMods = { ...selectedMods };
-    if (newSelectedMods[category]) {
-      newSelectedMods[category] = null;
-    } else {
-      newSelectedMods[category] = mod;
-    }
+    newSelectedMods[category] = mod;
     setSelectedMods(newSelectedMods);
     localStorage.setItem('selectedMods', JSON.stringify(newSelectedMods));
   }
