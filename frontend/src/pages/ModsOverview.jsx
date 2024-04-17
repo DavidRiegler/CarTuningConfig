@@ -9,9 +9,10 @@ export default function ModsOverview() {
   function handleSelectMod(category, mod) {
     const newSelectedMods = { ...selectedMods };
     if (newSelectedMods[category]) {
-      newSelectedMods[category] = null; 
+      newSelectedMods[category] = null;
+    } else {
+      newSelectedMods[category] = mod;
     }
-    newSelectedMods[category] = mod;
     setSelectedMods(newSelectedMods);
     localStorage.setItem('selectedMods', JSON.stringify(newSelectedMods));
   }
@@ -22,17 +23,18 @@ export default function ModsOverview() {
     return (
       mods &&
       mods.map((mod) => (
-        <div key={mod.name} className='bg-lightBg w-72 h-72 p-4 text-center flex flex-col justify-evenly'>
+        <div
+          key={mod.name}
+          className={`bg-lightBg w-72 h-72 p-4 text-center flex flex-col justify-evenly 
+          ${selectedMods[selectedCategory]?.name === mod.name && 'ring-8 ring-yellow-500 ring-opacity-50'}`}
+        >
           <h2 className='text-xl font-bold mb-3'>{mod.name}</h2>
           <h3 className=''>{mod.description}</h3>
           <button
             className='bg-yellow-500 text-white px-6 py-3 rounded-md hover:bg-yellow-600 self-center'
-            onClick={() => {
-              handleSelectMod(selectedCategory, mod)
-              alert("Selected " + mod.name + " successfully!")
-            }
-            }>
-            Select
+            onClick={() => handleSelectMod(selectedCategory, mod)}
+          >
+            {selectedMods[selectedCategory] === mod ? 'Deselect' : 'Select'}
           </button>
         </div>
       ))
@@ -56,31 +58,31 @@ export default function ModsOverview() {
       <div>
         <ul className='text-font text-3xl font-bold w-full px-8 flex justify-between'>
           <li
-            className='cursor-pointer'
+            className={`cursor-pointer ${selectedCategory === 'aerodynamics' && 'text-yellow-500'}`} 
             onClick={() => setSelectedCategory('aerodynamics')}
           >
             Aerodynamics
           </li>
           <li
-            className='cursor-pointer'
+            className={`cursor-pointer ${selectedCategory === 'engine' && 'text-yellow-500'}`} 
             onClick={() => setSelectedCategory('engine')}
           >
             Engine
           </li>
           <li
-            className='cursor-pointer'
+            className={`cursor-pointer ${selectedCategory === 'exhaust' && 'text-yellow-500'}`} 
             onClick={() => setSelectedCategory('exhaust')}
           >
             Exhaust
           </li>
           <li
-            className='cursor-pointer'
+            className={`cursor-pointer ${selectedCategory === 'handling' && 'text-yellow-500'}`} 
             onClick={() => setSelectedCategory('handling')}
           >
             Handling
           </li>
           <li
-            className='cursor-pointer'
+            className={`cursor-pointer ${selectedCategory === 'wheels' && 'text-yellow-500'}`} 
             onClick={() => setSelectedCategory('wheels')}
           >
             Wheels
