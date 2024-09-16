@@ -4,19 +4,16 @@ A website made for tuning exotic cars ranging from a Toyota Supra all the way to
 
 Preferred node.js version: v20.12.1 or newer
 
-Before starting the project download npm locally.
+Before starting the project run the following commands:
 ````Bash
 cd Backend
 npm i
-npm install mongoose
-npm install nodemon
 ````
 
 And for the frontend:
 ````Bash
 cd frontend
 npm i
-npm install axios
 ````
 
 You also have to download MongoDB: https://www.mongodb.com/try/download/community
@@ -34,3 +31,5 @@ Frontend:
 cd frontend
 npm run dev
 ````
+
+<h2>Enjoy!</h2>

@@ -60,7 +60,7 @@ export default function CarOverview() {
         <div className="col-span-1 p-4 flex flex-col justify-between">
           {renderProgressBars(car)}
           <div className="flex justify-between items-center mb-4">
-            <span className="text-white font-bold mx-28">{`$ ${car.price}`}</span>
+            <span className="text-white font-bold mx-36">{`$ ${car.price}`}</span>
             <button className='bg-yellow-500 text-white px-6 py-3 rounded-md hover:bg-yellow-600'
               onClick={() => {
                 const confirmation = window.confirm(`Are you sure you want to select ${car.manufacturer} ${car.model}?`);
